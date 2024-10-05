@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: maincontent(~{::section})}">
+
+<head>
+    <title>Questionnaire</title>
+</head>
+
+<body>
+    <section>
+        <h3>Questionnaire</h3>
+        <div th:object="${questionnaire}" class="container-fluid">
+            <h3 th:text="*{get().getTitle()}"></h3>
+            <p th:text="*{get().getDescription()}"></p>
+        </div>
+        <a href="/flashcard-mvc">Back</a>
+    </section>
+</body>
+
+</html>

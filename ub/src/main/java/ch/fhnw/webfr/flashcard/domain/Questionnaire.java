@@ -1,9 +1,13 @@
 package ch.fhnw.webfr.flashcard.domain;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="questionnaires")
+@Data
+@NoArgsConstructor
 public class Questionnaire {
 	
 	@Id
@@ -15,21 +19,4 @@ public class Questionnaire {
 		this.title = title;
 		this.description = description;
 	}
-	
-	public void setId(String id) {
-		this.id = id;
-	}
-	
-	public String getId() {
-		return id;
-	}
-	
-	public String getTitle() {
-		return title;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-	
 }
